@@ -1,0 +1,93 @@
+
+<!--
+- Features a modern card layout with soft gradient background
+- Includes profile section with circular image and title
+- Styled input field and button with hover animations
+- Clean typography with consistent spacing
+- Responsive design that works on mobile devices
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Checker - Profile Card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .card {
+            width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #4a90e2;
+        }
+
+        #password {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        .valid { color: #4CAF50; font-weight: bold; }
+        .invalid { color: #f44336; text-decoration: line-through; }
+        #requirements li { margin: 8px 0; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="profile">
+            <img src="piclumen-1740988091729.png" class="profile-img" alt="User photo">
+            <div>
+                <h2 style="margin:0">Jane Doe</h2>
+                <p style="margin:0; color: #666;">Security Specialist</p>
+            </div>
+        </div>
+        
+        <input type="password" id="password" placeholder="🔒 Enter your password">
+        <button onclick="checkPassword()">Verify Security</button>
+        <div id="result" style="margin: 1rem 0; text-align: center;"></div>
+        
+        <ul id="requirements">
+            <li id="length">✓ At least 8 characters</li>
+            <li id="uppercase">✓ Contains uppercase letter</li>
+            <li id="number">✓ Contains number</li>
+            <li id="special">✓ Contains special character</li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
